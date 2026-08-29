@@ -1,0 +1,18 @@
+senha = input ("digite sua senha")
+pontos = 0
+#maior que 8 caracteres
+if len (senha)>=8:
+    pontos +=1
+#uma letra maiuscula
+if any(c.isupper()for c in senha ):
+     pontos +=1
+    #um numero
+if any(c.isdigit() for c in senha):
+     pontos +=1
+if any(c in "!@#$%&*" for c in senha):
+     pontos +=1
+if   pontos == 4:
+     print("senha forte")
+elif pontos >=2:
+      print("senha media")
+else: print ("senha fraca")
